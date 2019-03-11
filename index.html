@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Recipe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -52,44 +52,47 @@
     </fieldset>
   </form>
 
-  <form id="example-create" class="border">
-    <fieldset>
-      <legend>Create One Example</legend>
-      <input type="text" name="example[text]" placeholder="Enter Example Text">
-      <input type="submit" value="Create Example">
-    </fieldset>
+  <form id="recipe-create" class="border">
+    <div class="inputgroup">
+      <legend>Create One Recipe</legend>
+      <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Enter Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Enter Recipe Directions"></textarea>
+      <input type="text" name="recipe[image]" placeholder="Paste URL for Image">
+      <input type="submit" value="Create Recipe">
+    </div>
   </form>
 
-  <form id="example-index" class="border">
+  <form id="recipe-index" class="border">
     <fieldset>
-      <legend>Get All Examples</legend>
-      <input type="submit" value="Get All Examples">
+      <legend>Get All Recipes</legend>
+      <input type="submit" value="Get All Recipes">
     </fieldset>
   </form>
-
-  <form id="example-show" class="border">
+<!--
+  <form id="recipe-show" class="border">
     <fieldset>
-      <legend>Get One Example</legend>
-      <input type="text" name="example[id]" placeholder="Enter Example ID">
+      <legend>Get One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
       <input type="submit">
     </fieldset>
   </form>
 
-  <form id="example-delete" class="border">
+  <form id="recipe-delete" class="border">
     <fieldset>
-      <legend>Delete One Example</legend>
-      <input type="text" name="example[id]" placeholder="Enter Example ID">
-      <input type="submit" value="Delete Example">
+      <legend>Delete One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="submit" value="Delete Recipe">
     </fieldset>
   </form>
 
-  <form id="example-update" class="border">
+  <form id="recipe-update" class="border">
     <fieldset>
-      <legend>Update One Example</legend>
-      <input type="text" name="example[id]" placeholder="Enter Example ID">
-      <input type="text" name="example[text]" placeholder="Enter Example Text">
-      <input type="submit" value="Update Example">
+      <legend>Update One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="text" name="recipe[text]" placeholder="Enter Recipe Text">
+      <input type="submit" value="Update Recipe">
     </fieldset>
-  </form>
+  </form> -->
     </body>
 </html>
