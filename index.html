@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Recipe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,88 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
+    <body class="container-fluid">
+  <h1>API Token Authentication</h1>
+  <h2>Do not enter real passwords, or passwords you have used anywhere else!</h2>
+
+  <p id="message"></p>
+
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input type="submit" value="Sign up">
+    </fieldset>
+  </form>
+
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign in">
+    </fieldset>
+  </form>
+
+  <form id="sign-out" class="border">
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type="submit" value="Sign out">
+    </fieldset>
+  </form>
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change Password">
+    </fieldset>
+  </form>
+
+  <form id="recipe-create" class="border">
+    <div class="inputgroup">
+      <legend>Create One Recipe</legend>
+      <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Enter Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Enter Recipe Directions"></textarea>
+      <input type="text" name="recipe[image]" placeholder="Paste URL for Image">
+      <input type="submit" value="Create Recipe">
+    </div>
+  </form>
+
+  <form id="recipe-index" class="border">
+    <fieldset>
+      <legend>Get All Recipes</legend>
+      <input type="submit" value="Get All Recipes">
+    </fieldset>
+  </form>
+<!--
+  <form id="recipe-show" class="border">
+    <fieldset>
+      <legend>Get One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="submit">
+    </fieldset>
+  </form>
+
+  <form id="recipe-delete" class="border">
+    <fieldset>
+      <legend>Delete One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="submit" value="Delete Recipe">
+    </fieldset>
+  </form>
+
+  <form id="recipe-update" class="border">
+    <fieldset>
+      <legend>Update One Recipe</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="text" name="recipe[text]" placeholder="Enter Recipe Text">
+      <input type="submit" value="Update Recipe">
+    </fieldset>
+  </form> -->
     </body>
 </html>
