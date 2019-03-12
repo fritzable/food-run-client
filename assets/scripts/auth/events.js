@@ -34,12 +34,14 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const onChangePassword = function (event) {
+const onChangePassword = (event) => {
   event.preventDefault()
-  console.log('Ran change password')
 
-  const data = getFormFields(this)
-  api.changePassword(data)
+  const form = event.target
+
+  const formData = getFormFields(form)
+
+  api.changePassword(formData)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
