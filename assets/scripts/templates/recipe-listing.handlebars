@@ -1,0 +1,33 @@
+{{#each recipes as |recipe|}}
+  {{log recipe}}
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+  <section class="recipe" data-id="{{recipe.id}}">
+    <h2>
+      <small>Name:</small> {{limit recipe.name 15}}
+    </h2>
+    <p>
+      <small>Ingredients:</small>
+      {{#if recipe.ingredients}}
+        {{recipe.ingredients}}
+      {{else}}
+        No ingredients provided.
+      {{/if}}
+    </p>
+    <p>
+      <small>Directions:</small>
+      {{#if recipe.directions}}
+        {{recipe.directions}}
+      {{else}}
+        No directions provided.
+      {{/if}}
+    </p>
+    <p>
+      <small>Id:</small>
+      {{recipe.id}}
+    </p>
+    <button type="submit" class="btn btn-danger delete-recipe">Remove</button>
+  </section>
+
+{{/each}}
