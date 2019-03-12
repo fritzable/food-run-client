@@ -78,7 +78,7 @@ const onUpdateRecipe = function (event) {
       .then(ui.onUpdateSuccess)
       .catch(ui.onUpdateFailure)
   } else {
-    $('#message').html('<p>Please provide an recipe id!</p>')
+    $('#message').html('<p>Please provide a recipe id!</p>')
     $('#message').css('background-color', 'red')
     console.log('Please provide a recipe id!')
   }

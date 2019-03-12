@@ -17,3 +17,15 @@ $red: #f00;
 .failure {
   background-color: $red;
 }
+
+.auth-forms {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.recipe-forms {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}

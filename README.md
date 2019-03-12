@@ -91,14 +91,14 @@ Your back-end repo's README should also have
 1.  [x] Link to Entity Relationship Diagram (ERD).
 
 ### Auth Specifications
-1.  [ ]  Signup with email, password, and password confirmation.
-1.  [ ]  Login with email and password.
-1.  [ ]  Logout when logged in.
-1.  [ ]  Change password with current and new password.
-1.  [ ]  Signup and Signin must only be available to not signed in users.
-1.  [ ]  Logout and Change password must only be available to signed in users.
-1.  [ ]  Give feedback to the user after each action's success or failure.
-1.  [ ]  All forms must clear after submit success or failure
+1.  [x]  Signup with email, password, and password confirmation.
+1.  [x]  Login with email and password.
+1.  [x]  Logout when logged in.
+1.  [x]  Change password with current and new password.
+1.  [x]  Signup and Signin must only be available to not signed in users.
+1.  [x]  Logout and Change password must only be available to signed in users.
+1.  [x]  Give feedback to the user after each action's success or failure.
+1.  [x]  All forms must clear after submit success or failure
 
 ### Client Specifications
 1.  [ ]  Use a front-end Javascript app to communicate with your API (both read and write) and render data that it receives in the browser.
@@ -112,10 +112,10 @@ Your back-end repo's README should also have
 1.  [ ] All forms must clear after submit success or failure
 
 ### API Specifications
-1.  [ ]  Build an API using Ruby on Rails and Postgresql.
-1.  [ ]  Create at least 4 RESTful routes for handling GET, POST, PUT/PATCH, and DELETE requests.
-1.  [ ]  Any actions which change data must be authenticated and the data must be "owned" by the user performing the change.
-1.  [ ]  Have at least 1 resource that has a relationship to User
+1.  [x]  Build an API using Ruby on Rails and Postgresql.
+1.  [x]  Create at least 4 RESTful routes for handling GET, POST, PUT/PATCH, and DELETE requests.
+1.  [x]  Any actions which change data must be authenticated and the data must be "owned" by the user performing the change.
+1.  [x]  Have at least 1 resource that has a relationship to User
 
 ### DO NOT!!
 Your app **must not**:

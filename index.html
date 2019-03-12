@@ -12,12 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-  <h1>Food Run recipe keeper</h1>
-  <h3>Do not enter real passwords, or passwords you have used anywhere else</h3>
+  <h3>Food Run recipe keeper</h3>
+  <h6>Do not enter real passwords, or passwords you have used anywhere else</h6>
 
   <p id="message"></p>
   <p id="content"></p>
 
+<div class="auth-forms">
   <form id="sign-up" class="form-group">
     <fieldset>
       <legend>Sign up</legend>
@@ -52,13 +53,15 @@
       <input type="submit" value="Change Password">
     </fieldset>
   </form>
+</div>
 
+<div class="recipe-forms">
   <form id="recipe-create" class="form-group">
     <div class="inputgroup">
       <legend>Create One Recipe</legend>
       <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
-      <textarea name="recipe[ingredients]" placeholder="Enter Recipe Ingredients"></textarea>
-      <textarea name="recipe[directions]" placeholder="Enter Recipe Directions"></textarea>
+      <textarea name="recipe[ingredients]" placeholder="Type or Paste Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Type or Paste Recipe Directions"></textarea>
       <input type="text" name="recipe[image]" placeholder="Paste URL for Image">
       <input type="submit" value="Create Recipe">
     </div>
@@ -98,5 +101,6 @@
       <input type="submit" value="Update Recipe">
     </fieldset>
   </form>
+</div>
     </body>
 </html>
