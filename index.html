@@ -12,12 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-  <h1>API Token Authentication</h1>
-  <h2>Do not enter real passwords, or passwords you have used anywhere else!</h2>
+  <h1>Food Run recipe keeper</h1>
+  <h3>Do not enter real passwords, or passwords you have used anywhere else</h3>
 
   <p id="message"></p>
+  <p id="content"></p>
 
-  <form id="sign-up" class="border">
+  <form id="sign-up" class="form-group">
     <fieldset>
       <legend>Sign up</legend>
       <input type="text" name="credentials[email]" placeholder="Email">
@@ -27,7 +28,7 @@
     </fieldset>
   </form>
 
-  <form id="sign-in" class="border">
+  <form id="sign-in" class="form-group">
     <fieldset>
       <legend>Sign in</legend>
       <input type="text" name="credentials[email]" placeholder="Email">
@@ -36,14 +37,14 @@
     </fieldset>
   </form>
 
-  <form id="sign-out" class="border">
+  <form id="sign-out" class="form-group">
     <fieldset>
       <legend>Sign Out</legend>
       <input type="submit" value="Sign out">
     </fieldset>
   </form>
 
-  <form id="change-password" class="border">
+  <form id="change-password" class="form-group">
     <fieldset>
       <legend>Change Password</legend>
       <input type="password" name="passwords[old]" placeholder="Old Password">
@@ -52,7 +53,7 @@
     </fieldset>
   </form>
 
-  <form id="recipe-create" class="border">
+  <form id="recipe-create" class="form-group">
     <div class="inputgroup">
       <legend>Create One Recipe</legend>
       <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
@@ -63,14 +64,14 @@
     </div>
   </form>
 
-  <form id="recipe-index" class="border">
+  <form id="recipe-index" class="form-group">
     <fieldset>
       <legend>Get All Recipes</legend>
       <input type="submit" value="Get All Recipes">
     </fieldset>
   </form>
 
-  <form id="recipe-show" class="border">
+  <form id="recipe-show" class="form-group">
     <fieldset>
       <legend>Get One Recipe</legend>
       <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
@@ -78,7 +79,7 @@
     </fieldset>
   </form>
 
-  <form id="recipe-delete" class="border">
+  <form id="recipe-delete" class="form-group">
     <fieldset>
       <legend>Delete One Recipe</legend>
       <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
@@ -86,7 +87,7 @@
     </fieldset>
   </form>
 
-  <form id="recipe-update" class="border">
+  <form id="recipe-update" class="form-group">
     <fieldset>
       <legend>Update One Recipe</legend>
       <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">

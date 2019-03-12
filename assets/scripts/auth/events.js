@@ -25,19 +25,11 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-// const onSignOut = function (event) {
-//   event.preventDefault()
-//   console.log('Ran sign out')
-//
-//   api.signOut()
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
-const onSignOut = (event) => {
+const onSignOut = function (event) {
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  api.signOut(formData)
+  console.log('Ran sign out')
+
+  api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }

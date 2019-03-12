@@ -18,6 +18,17 @@ const onIndexSuccess = function (data) {
   $('#message').text('All Recipes successfully received')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#content').html('')
+  data.recipes.forEach(recipe => {
+    const recipeHtml = (`
+    <p>Recipe ID: ${recipe.id}</p>
+    <p>Recipe Name: ${recipe.name}</p>
+    <p>Ingredients: ${recipe.ingredients}</p>
+    <p>Directions: ${recipe.directions}</p>
+    <br>
+    `)
+    $('#content').append(recipeHtml)
+  })
   console.log('onIndexSuccess ran. Data is :', data.recipes)
 }
 
