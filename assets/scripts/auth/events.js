@@ -25,21 +25,31 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-const onSignOut = function (event) {
+// const onSignOut = function (event) {
+//   event.preventDefault()
+//   console.log('Ran sign out')
+//
+//   api.signOut()
+//     .then(ui.signOutSuccess)
+//     .catch(ui.signOutFailure)
+// }
+const onSignOut = (event) => {
   event.preventDefault()
-  console.log('Ran sign out')
-
-  api.signOut()
+  const form = event.target
+  const formData = getFormFields(form)
+  api.signOut(formData)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
-const onChangePassword = function (event) {
+const onChangePassword = (event) => {
   event.preventDefault()
-  console.log('Ran change password')
 
-  const data = getFormFields(this)
-  api.changePassword(data)
+  const form = event.target
+
+  const formData = getFormFields(form)
+
+  api.changePassword(formData)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }

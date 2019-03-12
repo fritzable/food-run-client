@@ -6,7 +6,7 @@ const store = require('../store')
 const create = function (data) {
   console.log('data: ', data)
   return $.ajax({
-    url: config.apiUrl + '/examples',
+    url: config.apiUrl + '/recipes',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -18,7 +18,7 @@ const create = function (data) {
 
 const index = function () {
   return $.ajax({
-    url: config.apiUrl + '/examples',
+    url: config.apiUrl + '/recipes',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -26,9 +26,9 @@ const index = function () {
   })
 }
 
-const show = function (example) {
+const show = function (recipe) {
   return $.ajax({
-    url: config.apiUrl + '/examples/' + example.id,
+    url: config.apiUrl + '/recipes/' + recipe.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -38,7 +38,7 @@ const show = function (example) {
 
 const destroy = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/examples/' + id,
+    url: config.apiUrl + '/recipes/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -48,7 +48,7 @@ const destroy = function (id) {
 
 const update = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/examples/' + data.example.id,
+    url: config.apiUrl + '/recipes/' + data.recipe.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
