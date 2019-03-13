@@ -1,5 +1,7 @@
 'use strict'
 
+const showRecipesTemplate = require('../templates/recipe-listing.handlebars')
+
 const onCreateSuccess = function (data) {
   $('#message').text('Recipe successfully created')
   $('#message').removeClass()
@@ -19,16 +21,9 @@ const onIndexSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#content').html('')
-  data.recipes.forEach(recipe => {
-    const recipeHtml = (`
-    <p>Recipe ID: ${recipe.id}</p>
-    <p>Recipe Name: ${recipe.name}</p>
-    <p>Ingredients: ${recipe.ingredients}</p>
-    <p>Directions: ${recipe.directions}</p>
-    <br>
-    `)
-    $('#content').append(recipeHtml)
-  })
+  const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
+  $('#content').html(showRecipesHtml)
+
   $('form').trigger('reset')
 }
 
@@ -91,6 +86,7 @@ const onUpdateFailure = function (error) {
   $('#message').addClass('failure')
   $('form').trigger('reset')
 }
+
 
 module.exports = {
   onCreateSuccess,

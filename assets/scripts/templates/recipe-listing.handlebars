@@ -1,12 +1,10 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
-  <!-- {{> partial}}
-  Don't uncomment yet -->
 
   <section class="recipe" data-id="{{recipe.id}}">
-    <h2>
+    <h4>
       <small>Name:</small> {{limit recipe.name 15}}
-    </h2>
+    </h4>
     <p>
       <small>Ingredients:</small>
       {{#if recipe.ingredients}}
