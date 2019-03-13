@@ -4,8 +4,53 @@ $black: #000;
 $green: #080;
 $red: #f00;
 
+// Calculations for repeated linear-gradient as a whole-width underline
+// from Benny Bottema on stackoverflow https://stackoverflow.com/a/48840828
+$rule-height: 20px; // <-- primary parameter
+
+$min-font-size: 10pt;
+$max-font-size: 20pt;
+$rule-height-to-font-size-factor: 1.2;
+
+  // auto-sizing calculations
+  $font-size: min(max($rule-height * $rule-height-to-font-size-factor, $min-font-size), $max-font-size);
+  $rule-mask-height: $rule-height - 1;
+  $rule-padding-top: $rule-height + 2;
+  $rule-padding-right: $rule-height;
+  $rule-padding-left: $rule-height * 2;
+
+$paper-color: #FFFFFF;
+$line-color: rgba(0,30,38, .4);
+$text-color: #261b00;
+
+html { height: 100%; }
+body { background-color: #FFFFFF; }
+
+.recipe {
+  color: $text-color;
+  border: 1px solid #EEEEEE;
+  box-shadow: 1px 1px 0 #DDDDDD;
+  display: inline-block;
+  vertical-align: top; // spacing fix: https://stackoverflow.com/a/7144960/441662
+  font-size: $font-size;
+  line-height: $rule-height;
+  margin: 2% auto;
+  padding: $rule-padding-top $rule-height 3px $rule-padding-left;
+  resize: none;
+  min-height: 200px;
+  width: 300px;
+  background-color: $paper-color;
+  background-image:
+    -moz-linear-gradient(top, transparent, transparent $rule-mask-height, $line-color 0px);
+  background-image:
+    -webkit-linear-gradient(top, transparent, transparent $rule-mask-height, $line-color 0);
+  -webkit-background-size: 100% $rule-height;
+  background-size: 100% $rule-height;
+}
+
 .border {
   border: 3px solid $black;
+  border-radius: 5px;
   margin: 20px;
   padding: 20px;
 }
@@ -20,12 +65,14 @@ $red: #f00;
 
 .auth-forms {
   border: 3px solid $black;
+  border-radius: 5px;
   margin: 20px;
   padding: 20px;
 }
 
 .recipe-forms {
   border: 3px solid $black;
+  border-radius: 5px;
   margin: 20px;
   padding: 20px;
 }
