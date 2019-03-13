@@ -4,22 +4,26 @@
     <h4>
       <small>Name:</small> {{limit recipe.name 15}}
     </h4>
-    <p>
       <small>Ingredients:</small>
+    <ul>
       {{#if recipe.ingredients}}
-        {{recipe.ingredients}}
+        {{#each recipe.ingredients as |ingredient|}}
+      <li>{{ingredient}}</li>
+    {{/each}}
       {{else}}
         No ingredients provided.
       {{/if}}
-    </p>
-    <p>
+    </ul>
       <small>Directions:</small>
+    <ul>
       {{#if recipe.directions}}
-        {{recipe.directions}}
+        {{#each recipe.directions as |direction|}}
+      <li>{{direction}}</li>
+      {{/each}}
       {{else}}
         No directions provided.
       {{/if}}
-    </p>
+    </ul>
     <p>
       <small>Id:</small>
       {{recipe.id}}
