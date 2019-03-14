@@ -7,7 +7,6 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('Ran sign up')
 
   const data = getFormFields(this)
   api.signUp(data)
@@ -17,7 +16,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('Ran sign in')
 
   const data = getFormFields(this)
   api.signIn(data)
@@ -27,7 +25,6 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('Ran sign out')
 
   api.signOut()
     .then(ui.signOutSuccess)
