@@ -1,6 +1,7 @@
 {{#each recipes as |recipe|}}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <section class="recipe" data-id="{{recipe.id}}">
     <h4>
       <small>Name:</small> {{limit recipe.name 15}}
@@ -11,6 +12,13 @@
     <p>
       <small>Name:</small> {{limit recipe.name 15}}
     </p>
+=======
+<div class="recipe-container">
+  <h1>
+    <small>Name:</small> {{limit recipe.name 15}}
+  </h1>
+  <section id="recipe-area" class="recipe" data-id="{{recipe.id}}">
+>>>>>>> development
       <small>Ingredients:</small>
     <ul>
       {{#if recipe.ingredients}}
@@ -35,7 +43,7 @@
       <small>Id:</small>
       {{recipe.id}}
     </p>
-    <button id="recipe-delete" class="btn btn-danger" data-id="{{recipe.id}}">Delete</button>
   </section>
-
+  <button id="recipe-delete" class="btn btn-danger" data-id="{{recipe.id}}">Delete</button>
+</div>
 {{/each}}
