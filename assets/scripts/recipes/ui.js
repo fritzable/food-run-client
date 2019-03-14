@@ -21,9 +21,12 @@ const onIndexSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#content').html('')
+  data.recipes.forEach(recipe => {
+    recipe.ingredients = recipe.ingredients.split('\n')
+    recipe.directions = recipe.directions.split('\n')
+  })
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('#content').html(showRecipesHtml)
-
   $('form').trigger('reset')
 }
 

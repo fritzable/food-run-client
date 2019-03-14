@@ -27,6 +27,7 @@ const signInSuccess = function (data) {
   $('#change-password').show()
   $('.recipe-forms').show()
   $('#content').show()
+  $('#content').text('')
   $('form').trigger('reset')
   store.user = data.user
 }

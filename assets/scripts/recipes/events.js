@@ -45,19 +45,15 @@ const onIndexRecipes = function (event) {
 
 const onDeleteRecipe = function (event) {
   event.preventDefault()
-  console.log('onDeleteRecipe ran')
+  const recipeId = $(event.target).data('id')
 
-  const data = getFormFields(event.target)
-  const recipe = data.recipe
-
-  if (recipe.id.length !== 0) {
-    api.destroy(recipe.id)
+  if (recipeId.length !== 0) {
+    api.destroy(recipeId)
       .then(ui.onDeleteSuccess)
       .catch(ui.onDeleteFailure)
   } else {
     $('#message').html('<p>Please provide a recipe id</p>')
     $('#message').css('background-color', 'red')
-    console.log('Please provide a recipe id')
   }
 }
 
@@ -89,7 +85,7 @@ const addHandlers = () => {
   $('#recipe-create').on('submit', onCreateRecipe)
   $('#recipe-index').on('submit', onIndexRecipes)
   // $('#recipe-show').on('submit', onShowRecipe)
-  $('#recipe-delete').on('submit', onDeleteRecipe)
+  $('#content').on('click', '#recipe-delete', onDeleteRecipe)
   $('#recipe-update').on('submit', onUpdateRecipe)
 }
 

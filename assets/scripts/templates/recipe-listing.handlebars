@@ -1,30 +1,41 @@
 {{#each recipes as |recipe|}}
 
+<<<<<<< HEAD
   <section class="recipe" data-id="{{recipe.id}}">
     <h4>
       <small>Name:</small> {{limit recipe.name 15}}
     </h4>
+=======
+  <section id="recipe-area" class="recipe" data-id="{{recipe.id}}">
+>>>>>>> development
     <p>
+      <small>Name:</small> {{limit recipe.name 15}}
+    </p>
       <small>Ingredients:</small>
+    <ul>
       {{#if recipe.ingredients}}
-        {{recipe.ingredients}}
+        {{#each recipe.ingredients as |ingredient|}}
+      <li>{{ingredient}}</li>
+    {{/each}}
       {{else}}
         No ingredients provided.
       {{/if}}
-    </p>
-    <p>
+    </ul>
       <small>Directions:</small>
+    <ul>
       {{#if recipe.directions}}
-        {{recipe.directions}}
+        {{#each recipe.directions as |direction|}}
+      <li>{{direction}}</li>
+      {{/each}}
       {{else}}
         No directions provided.
       {{/if}}
-    </p>
+    </ul>
     <p>
       <small>Id:</small>
       {{recipe.id}}
     </p>
-    <button type="submit" class="btn btn-danger delete-recipe">Remove</button>
+    <button id="recipe-delete" class="btn btn-danger" data-id="{{recipe.id}}">Delete</button>
   </section>
 
 {{/each}}
