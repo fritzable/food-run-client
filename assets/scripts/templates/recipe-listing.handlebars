@@ -1,9 +1,9 @@
 {{#each recipes as |recipe|}}
 
-  <section class="recipe" data-id="{{recipe.id}}">
-    <h4>
+  <section id="recipe-area" class="recipe" data-id="{{recipe.id}}">
+    <p>
       <small>Name:</small> {{limit recipe.name 15}}
-    </h4>
+    </p>
       <small>Ingredients:</small>
     <ul>
       {{#if recipe.ingredients}}
@@ -28,7 +28,7 @@
       <small>Id:</small>
       {{recipe.id}}
     </p>
-    <button type="submit" class="btn btn-danger delete-recipe">Remove</button>
+    <button id="recipe-delete" class="btn btn-danger" data-id="{{recipe.id}}">Delete</button>
   </section>
 
 {{/each}}

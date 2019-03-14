@@ -27,7 +27,6 @@ const onIndexSuccess = function (data) {
   })
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('#content').html(showRecipesHtml)
-  console.log(data)
   $('form').trigger('reset')
 }
 
