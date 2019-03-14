@@ -8,24 +8,24 @@
       <small>Ingredients:</small>
     <ul>
       {{#if recipe.ingredients}}
-        {{#each recipe.ingredients as |ingredient|}}
-      <li>{{ingredient}}</li>
+      {{#each recipe.ingredients as |ingredient|}}
+    <li>{{ingredient}}</li>
+  {{/each}}
+    {{else}}
+      No ingredients provided.
+    {{/if}}
+  </ul>
+    <small>Directions:</small>
+  <ul>
+    {{#if recipe.directions}}
+      {{#each recipe.directions as |direction|}}
+    <li>{{direction}}</li>
     {{/each}}
-      {{else}}
-        No ingredients provided.
-      {{/if}}
-    </ul>
-      <small>Directions:</small>
-    <ul>
-      {{#if recipe.directions}}
-        {{#each recipe.directions as |direction|}}
-      <li>{{direction}}</li>
-      {{/each}}
-      {{else}}
-        No directions provided.
-      {{/if}}
-    </ul>
-    <p>
+    {{else}}
+      No directions provided.
+    {{/if}}
+  </ul>
+  <p>
       <small>Id:</small>
       {{recipe.id}}
     </p>
