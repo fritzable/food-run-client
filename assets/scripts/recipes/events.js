@@ -7,7 +7,6 @@ const ui = require('./ui')
 
 const onCreateRecipe = function (event) {
   event.preventDefault()
-  console.log('onCreateRecipe ran')
 
   const data = getFormFields(event.target)
   api.create(data)
@@ -17,7 +16,6 @@ const onCreateRecipe = function (event) {
 
 const onIndexRecipes = function (event) {
   event.preventDefault()
-  console.log('onIndexRecipes ran')
 
   api.index()
     .then(ui.onIndexSuccess)
@@ -46,10 +44,12 @@ const onIndexRecipes = function (event) {
 const onDeleteRecipe = function (event) {
   event.preventDefault()
   const recipeId = $(event.target).data('id')
-
   if (recipeId.length !== 0) {
     api.destroy(recipeId)
-      .then(ui.onDeleteSuccess)
+      .then(function () {
+        ui.onDeleteSuccess(event)
+        onIndexRecipes(event)
+      })
       .catch(ui.onDeleteFailure)
   } else {
     $('#message').html('<p>Please provide a recipe id</p>')
@@ -59,7 +59,6 @@ const onDeleteRecipe = function (event) {
 
 const onUpdateRecipe = function (event) {
   event.preventDefault()
-  console.log('onUpdateRecipe ran')
 
   const data = getFormFields(event.target)
   const recipe = data.recipe
