@@ -10,7 +10,7 @@ $rule-height: 20px; // <-- primary parameter
 
 $min-font-size: 8pt;
 $max-font-size: 18pt;
-$rule-height-to-font-size-factor: 1;
+$rule-height-to-font-size-factor: 0.9;
 
   // auto-sizing calculations
   $font-size: min(max($rule-height * $rule-height-to-font-size-factor, $min-font-size), $max-font-size);
@@ -28,16 +28,16 @@ body { background-color: #FFFFFF; }
 
 .recipe {
   color: $text-color;
-  border: 1px solid #EEEEEE;
-  box-shadow: 3px 3px 0 #DDDDDD;
   display: inline-block;
   vertical-align: top; // spacing fix: https://stackoverflow.com/a/7144960/441662
   font-size: $font-size;
   line-height: $rule-height;
   margin: 2% auto;
+  overflow: scroll;
   padding: $rule-padding-top $rule-height 3px $rule-padding-left;
   resize: none;
   min-height: 200px;
+  max-height: 500px;
   width: 90vw;
   background-color: $paper-color;
   background-image:
@@ -46,6 +46,8 @@ body { background-color: #FFFFFF; }
     -webkit-linear-gradient(top, transparent, transparent $rule-mask-height, $line-color 0);
   -webkit-background-size: 100% $rule-height;
   background-size: 100% $rule-height;
+  background-attachment: scroll;
+  -webkit-background-attachment: scroll;
 }
 
 .border {
@@ -87,4 +89,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+
+.recipe-container {
+  border: 1px solid #EEEEEE;
+  box-shadow: 3px 3px 0 #DDDDDD;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
 }
