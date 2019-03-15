@@ -9,9 +9,9 @@ This app, built with a Rails API and a JavaScript front end, is a simple recipe
 keeper. With a later update, it will have the ability to produce a grocery list
 from the recipes you choose for the week.
 
-# Planning
+## Planning
 
-I initially wanted this app to be complete with a list generator along with check-marking capability on the list. As part of planning the basic requirements of this type of app, I determined the first feature to develop a simple one-to-many data relationship would be a recipe keeper. So I planned to build a working version of this simpler feature, and add to that.
+I initially wanted this app to be complete with a list generator along with check-marking capability on the list. As part of planning the basic requirements of this type of app, I determined the first feature to develop with a simple one-to-many data relationship would be a recipe keeper. So I planned to build a working version of this simpler feature, and add to that.
 
 I used this image as a design wireframe:
 ![Wireframe](./ClientWireframe.png)
@@ -30,16 +30,16 @@ Version 2
    - move an ingredient and its amount to a section showing I already have it
    - cross off items when bought, but retain a record of what I bought (still show it visually)
 
-# Link to the back end repo:
+## Link to the back end repo:
 
 https://github.com/fritzable/food-run
 
-# Link to deployed sites:
+## Link to deployed sites:
 
 Client: https://fritzable.github.io/food-run-client/
 API: https://logansfoodrun.herokuapp.com/
 
-# What it does and how it works
+## What it does and how it works
 
 Users can sign in and add their own recipes.
 Using Rails' authentication methods, all Users are subject to password and username validation before accessing the site's functions.
@@ -49,15 +49,20 @@ JavaScript: UI and API interaction logic
 HTML: structure
 CSS: styling
 Bootstrap: styling
-Handlebars: HTML DOM updating
+Handlebars: HTML templating
 Styling credit: On recipe cards, used Benny Bottema's text height calculations and linear-gradient idea to create an underline on each line in an area: https://stackoverflow.com/a/48840828
 
-# Later version enhancements
+## Later version enhancements
 
 This app led to several ideas about other cooking-related pain points, and a few of them could be incorporated into later versions of FoodRun.
 
 Optimize step-by-step instruction reading for small devices:
 I would say recipe instructions have yet to be optimized on any digital platform, whether laptop or mobile. There is an opportunity to make cooking apps more useful. Steps should be large and readable, and easy to step through. I see this as being an extra large "current" step, with smaller "prior" and "next" steps rotating positions with "current."
+
+UI improvements:
+- add Update and Save buttons to recipe cards, and change all buttons to icons.
+- collapse forms into their own links inside a hamburger in the navbar.
+- improve responsive styling.
 
 ### Deployment
 Be deployed online, where the rest of the world can access it.
@@ -120,12 +125,12 @@ Your back-end repo's README should also have
 
 ### DO NOT!!
 Your app **must not**:
-1.  [ ]   Delete your repository at any time or start over.
-1.  [ ]   Rely on refreshing the page for any functionality.
+1.  [x]   Delete your repository at any time or start over.
+1.  [x]   Rely on refreshing the page for any functionality.
 1.  [ ]   Have any user-facing bugs.
     - [ ] Display non-functional buttons, nor buttons that do not successfully complete a task.
     - [ ] Show actions at inappropriate times (example:  change password form when a user is not signed in).
     - [ ] Forms not clearing at appropriate times (example: sign up form not clearing after success).
-1.  [ ]   Use alerts for anything.
+1.  [x]   Use alerts for anything.
 1.  [ ]   Display errors or warnings in the console.
 1.  [ ]   Display debugging messages in the console.
