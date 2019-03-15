@@ -91,7 +91,6 @@ const onUpdateFailure = function () {
   $('form').trigger('reset')
 }
 
-
 module.exports = {
   onCreateSuccess,
   onCreateFailure,

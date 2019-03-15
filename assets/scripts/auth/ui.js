@@ -9,7 +9,7 @@ const signUpSuccess = function (data) {
   $('form').trigger('reset')
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function () {
   $('#message').text('Error on sign up')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -32,7 +32,7 @@ const signInSuccess = function (data) {
   store.user = data.user
 }
 
-const signInFailure = function (error) {
+const signInFailure = function () {
   $('#message').text('Error on sign in')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -56,7 +56,7 @@ const signOutSuccess = function () {
   store.user = null
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -70,7 +70,7 @@ const changePasswordSuccess = function () {
   $('form').trigger('reset')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function () {
   $('#message').text('Error on change password')
   $('#message').removeClass()
   $('#message').addClass('failure')
