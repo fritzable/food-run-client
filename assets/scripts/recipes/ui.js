@@ -17,7 +17,6 @@ const onCreateFailure = function (error) {
 }
 
 const onIndexSuccess = function (data) {
-  console.log(data)
   const recipesLength = data.recipes.length
   $('#message').text('All Recipes successfully received' + ' (' + recipesLength + ')')
   $('#message').removeClass()
