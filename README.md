@@ -63,6 +63,7 @@ UI improvements:
 - add Update and Save buttons to recipe cards, and change all buttons to icons.
 - collapse forms into their own links inside a hamburger in the navbar.
 - improve responsive styling.
+- there is a column for image URL in Recipes, but the display image still needs to be coded in.
 
 ### Deployment
 Be deployed online, where the rest of the world can access it.

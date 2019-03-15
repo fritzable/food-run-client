@@ -19,6 +19,37 @@
   <p id="message"></p>
   <div id="content"></div>
 
+
+<div class="recipe-forms">
+  <form id="recipe-create" class="form-group">
+    <div class="inputgroup">
+      <legend>Add a recipe</legend>
+      <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Type or Paste Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Type or Paste Recipe Directions"></textarea>
+      <input type="submit" value="Create Recipe">
+    </div>
+  </form>
+
+  <form id="recipe-index" class="form-group">
+    <fieldset>
+      <legend>Get your recipes</legend>
+      <input type="submit" value="Get All Recipes">
+    </fieldset>
+  </form>
+
+  <form id="recipe-update" class="form-group">
+    <fieldset>
+      <legend>Update a recipe (must reenter all fields you want to be filled)</legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="text" name="recipe[name]" placeholder="Update Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Update Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Update Recipe Directions"></textarea>
+      <input type="submit" value="Update Recipe">
+    </fieldset>
+  </form>
+</div>
+
 <div class="auth-forms">
   <form id="sign-up" class="form-group">
     <fieldset>
@@ -52,54 +83,6 @@
       <input type="password" name="passwords[old]" placeholder="Old Password">
       <input type="password" name="passwords[new]" placeholder="New Password">
       <input type="submit" value="Change Password">
-    </fieldset>
-  </form>
-</div>
-
-<div class="recipe-forms">
-  <form id="recipe-create" class="form-group">
-    <div class="inputgroup">
-      <legend>Add a recipe</legend>
-      <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
-      <textarea name="recipe[ingredients]" placeholder="Type or Paste Recipe Ingredients"></textarea>
-      <textarea name="recipe[directions]" placeholder="Type or Paste Recipe Directions"></textarea>
-      <input type="text" name="recipe[image]" placeholder="Paste URL for Image">
-      <input type="submit" value="Create Recipe">
-    </div>
-  </form>
-
-  <form id="recipe-index" class="form-group">
-    <fieldset>
-      <legend>Get your recipes</legend>
-      <input type="submit" value="Get All Recipes">
-    </fieldset>
-  </form>
-
-  <!-- <form id="recipe-show" class="form-group">
-    <fieldset>
-      <legend>Get One Recipe</legend>
-      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
-      <input type="submit">
-    </fieldset>
-  </form> -->
-
-  <!-- <form id="recipe-delete" class="form-group">
-    <fieldset>
-      <legend>Delete One Recipe</legend>
-      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
-      <input type="submit" value="Delete Recipe">
-    </fieldset>
-  </form> -->
-
-  <form id="recipe-update" class="form-group">
-    <fieldset>
-      <legend>Update a recipe</legend>
-      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
-      <input type="text" name="recipe[name]" placeholder="Update Recipe Name">
-      <textarea name="recipe[ingredients]" placeholder="Update Recipe Ingredients"></textarea>
-      <textarea name="recipe[directions]" placeholder="Update Recipe Directions"></textarea>
-      <input type="text" name="recipe[image]" placeholder="Paste URL for Image">
-      <input type="submit" value="Update Recipe">
     </fieldset>
   </form>
 </div>
