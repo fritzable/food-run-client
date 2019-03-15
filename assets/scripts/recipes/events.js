@@ -24,11 +24,9 @@ const onIndexRecipes = function (event) {
 
 // const onShowRecipe = function (event) {
 //   event.preventDefault()
-//   console.log('onShowRecipe ran. Event is' + event)
 //
 //   const data = getFormFields(event.target)
 //   const recipe = data.recipe
-//   console.log('onShowRecipe ran. Data is:' + data)
 //
 //   if (recipe.id.length !== 0) {
 //     api.show(recipe)
@@ -37,7 +35,6 @@ const onIndexRecipes = function (event) {
 //   } else {
 //     $('#message').html('<p>Please provide a recipe id</p>')
 //     $('#message').css('background-color', 'red')
-//     console.log('Please enter a recipe id')
 //   }
 // }
 
@@ -66,7 +63,7 @@ const onUpdateRecipe = function (event) {
   if (recipe.text === '') {
     $('#message').html('<p>Text is required</p>')
     $('#message').css('background-color', 'red')
-    console.log('Text is required')
+    $('form').trigger('reset') // This reset should be left out, but needed for MVP
     return false
   }
   if (recipe.id.length !== 0) {
@@ -76,7 +73,7 @@ const onUpdateRecipe = function (event) {
   } else {
     $('#message').html('<p>Please provide a recipe id</p>')
     $('#message').css('background-color', 'red')
-    console.log('Please provide a recipe id')
+    $('form').trigger('reset') // This reset should be left out, but needed for MVP
   }
 }
 

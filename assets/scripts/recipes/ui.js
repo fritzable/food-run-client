@@ -9,11 +9,11 @@ const onCreateSuccess = function (data) {
   $('form').trigger('reset')
 }
 
-const onCreateFailure = function (error) {
+const onCreateFailure = function () {
   $('#message').text('Error on creating recipe')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  $('form').trigger('reset')
+  $('form').trigger('reset') // This reset should be left out, but needed for MVP
 }
 
 const onIndexSuccess = function (data) {
@@ -31,7 +31,7 @@ const onIndexSuccess = function (data) {
   $('form').trigger('reset')
 }
 
-const onIndexFailure = function (error) {
+const onIndexFailure = function () {
   $('#message').text('Error on getting recipes')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -70,7 +70,7 @@ const onDeleteSuccess = function () {
   $('form').trigger('reset')
 }
 
-const onDeleteFailure = function (error) {
+const onDeleteFailure = function () {
   $('#message').text('Error on deleting recipe')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -84,7 +84,7 @@ const onUpdateSuccess = function () {
   $('form').trigger('reset')
 }
 
-const onUpdateFailure = function (error) {
+const onUpdateFailure = function () {
   $('#message').text('Error on updating recipe')
   $('#message').removeClass()
   $('#message').addClass('failure')
