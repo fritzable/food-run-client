@@ -44,13 +44,16 @@ API: https://logansfoodrun.herokuapp.com/
 Users can sign in and add their own recipes.
 Using Rails' authentication methods, all Users are subject to password and username validation before accessing the site's functions.
 Signed in Users can retrieve the list of their own recipes, or view a single recipe (currently by ID reference only, updates should include search functionality). Users can update their recipes individually, and they can change their user password.
-Recipes and any changes are saved as resources to a Postgresql database (Users are, as well).
-JavaScript: UI and API interaction logic
-HTML: structure
-CSS: styling
-Bootstrap: styling
-Handlebars: HTML templating
-Styling credit: On recipe cards, used Benny Bottema's text height calculations and linear-gradient idea to create an underline on each line in an area: https://stackoverflow.com/a/48840828
+
+## Technologies used
+- Recipes and any changes are saved as resources to a Postgresql database (Users are, as well).
+- Rails backend
+- JavaScript: UI and API interaction logic
+- HTML: structure
+- CSS: styling
+- Bootstrap: styling
+- Handlebars: HTML templating
+- Styling credit: On recipe cards, used Benny Bottema's text height calculations and linear-gradient idea to create an underline on each line in an area: https://stackoverflow.com/a/48840828
 
 ## Later version enhancements
 

@@ -43,6 +43,7 @@ const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#message').addClass('sign-out')
   $('form').trigger('reset')
   $('#content').hide()
   $('#change-password-form').hide()
