@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Recipe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <nav class="navbar navbar-dark bg-dark">
+          <span class="navbar-brand">FoodRun</span>
+      </nav>
+
+  <p id="message"></p>
+  <div id="content"></div>
+
+
+<div class="recipe-forms">
+  <form id="recipe-create" class="form-group">
+    <div class="inputgroup">
+      <legend>Add a recipe</legend>
+      <input type="text" name="recipe[name]" placeholder="Enter Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Type or Paste Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Type or Paste Recipe Directions"></textarea>
+      <input type="submit" value="Create Recipe">
+    </div>
+  </form>
+
+  <form id="recipe-index" class="form-group">
+    <fieldset>
+      <legend>Get your recipes</legend>
+      <input type="submit" value="Get All Recipes">
+    </fieldset>
+  </form>
+
+  <form id="recipe-update" class="form-group">
+    <fieldset>
+      <legend>Update a recipe by ID <small>(must reenter all fields you want to be filled)</small></legend>
+      <input type="text" name="recipe[id]" placeholder="Enter Recipe ID">
+      <input type="text" name="recipe[name]" placeholder="Update Recipe Name">
+      <textarea name="recipe[ingredients]" placeholder="Update Recipe Ingredients"></textarea>
+      <textarea name="recipe[directions]" placeholder="Update Recipe Directions"></textarea>
+      <input type="submit" value="Update Recipe">
+    </fieldset>
+  </form>
+</div>
+
+<div class="auth-forms">
+  <form id="sign-up" class="form-group">
+    <fieldset>
+      <legend>Sign up</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input type="submit" value="Sign up">
+    </fieldset>
+  </form>
+
+  <form id="sign-in" class="form-group">
+    <fieldset>
+      <legend>Sign in</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign in">
+    </fieldset>
+  </form>
+
+  <form id="sign-out" class="form-group">
+    <fieldset>
+      <legend>Sign out</legend>
+      <input type="submit" value="Sign out">
+    </fieldset>
+  </form>
+
+  <form id="change-password" class="form-group">
+    <fieldset>
+      <legend>Change password</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change Password">
+    </fieldset>
+  </form>
+</div>
+    </body>
+</html>
