@@ -44,9 +44,17 @@ const changePassword = function (data) {
   })
 }
 
+const examples = function () {
+  return $.ajax({
+    url: config.apiUrl + '/examples',
+    method: 'GET'
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  examples
 }
